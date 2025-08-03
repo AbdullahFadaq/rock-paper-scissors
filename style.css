@@ -2,8 +2,42 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    background-color: cadetblue;
 }
 
 .header {
-    
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgb(71, 70, 70);
+}
+
+.logo {
+    width: 120px;
+}
+
+.title {
+    margin-right: 10%;
+}
+
+.choose-text {
+    text-align: center;
+    margin: 100px 0;
+    font-size: 62px;
+}
+
+.choice-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.choice-buttons button {
+    background-color: darkcyan; 
+    text-decoration: none;
+    font-size: 32px;
+    width: 30%;
+    border: none;
+    padding: 25px 26px;
+    text-align: center;
 }
