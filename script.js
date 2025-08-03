@@ -10,29 +10,29 @@ function getComputerChoice () {
 
 }
 
-function getHumanChoice(){
+// function getHumanChoice(){
 
-    while(true){
-        let choice = prompt(" 1 - rock\n 2 - paper\n 3 - scissors: ")
+//     while(true){
+//         let choice = prompt(" 1 - rock\n 2 - paper\n 3 - scissors: ")
     
-        if(choice == 1){
-            return "rock";
-        }
-        if(choice == 2){
-            return "paper";
-        }
-        if(choice == 3){
-            return "scissors";
-        }    
+//         if(choice == 1){
+//             return "rock";
+//         }
+//         if(choice == 2){
+//             return "paper";
+//         }
+//         if(choice == 3){
+//             return "scissors";
+//         }    
         
-        //return null when propmt is cancelled
-        if(choice === null){
-            return null;
-        } 
+//         //return null when propmt is cancelled
+//         if(choice === null){
+//             return null;
+//         } 
 
-        alert("invalid input! please enter 1, 2, or 3 ")
-    }
-}
+//         alert("invalid input! please enter 1, 2, or 3 ")
+//     }
+// }
 
 
 
