@@ -6,7 +6,7 @@ function getComputerChoice () {
     //generate a math random number (0<= number <1), multiplies it by 3 (number of array items), and floors it down 
     //so the generated outcomes are 0, 1, or 2 
     let randomChoice = Math.floor(Math.random() * choices.length); 
-    return randomChoice;
+    return choices[randomChoice];
 
 }
 
