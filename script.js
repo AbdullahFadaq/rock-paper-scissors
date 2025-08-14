@@ -10,31 +10,17 @@ function getComputerChoice () {
 
 }
 
-// function getHumanChoice(){
+function getHumanChoice(){
 
-//     while(true){
-//         let choice = prompt(" 1 - rock\n 2 - paper\n 3 - scissors: ")
+    const rockBtn = document.querySelector(".rock-button")
+    const paperBtn = document.querySelector(".paper-button")
+    const scissorsBtn = document.querySelector(".scissors-button")
+
+    rockBtn.addEventListener('click',()=> { return "you played rock" })
     
-//         if(choice == 1){
-//             return "rock";
-//         }
-//         if(choice == 2){
-//             return "paper";
-//         }
-//         if(choice == 3){
-//             return "scissors";
-//         }    
-        
-//         //return null when propmt is cancelled
-//         if(choice === null){
-//             return null;
-//         } 
-
-//         alert("invalid input! please enter 1, 2, or 3 ")
-//     }
-// }
+}
 
 
 
-console.log(getComputerChoice());
-console.log(getHumanChoice());
+// console.log(getComputerChoice());
+// console.log(getHumanChoice());
