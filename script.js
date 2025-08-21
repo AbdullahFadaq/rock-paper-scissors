@@ -11,18 +11,22 @@ const humanScoreDisplay = document.querySelector(".player-score .score");
 const computerScoreDisplay = document.querySelector(".computer-score .score");
 
 
+
 function getComputerChoice () {
     const choices = ["rock", "paper", "scissors"]
     //generate a math random number (0<= number <1), multiplies it by 3 (number of array items), and floors it down 
     //so the generated outcomes are 0, 1, or 2 
     let randomChoice = Math.floor(Math.random() * choices.length); 
     return choices[randomChoice];
-
+    
 }
+
 
 document.querySelector(".rock-button").addEventListener("click", () => playRound("rock"));
 document.querySelector(".paper-button").addEventListener("click", () => playRound("paper"));
 document.querySelector(".scissors-button").addEventListener("click", () => playRound("scissors"));
+
+document.querySelector(".reset-button").addEventListener("click", resetGame);
 
 
 
@@ -69,6 +73,22 @@ function playRound(humanChoice){
     }
 
 
+
+}
+
+
+function resetGame (){
+
+    humanScore = 0;
+    computerScore = 0;
+
+    humanScoreDisplay.textContent = humanScore;
+    computerScoreDisplay.textContent = computerScore;
+
+    displayHumanChoice.textContent = "-";
+    displayComputerChoice.textContent = "-";
+
+    displayResult.textContent = "Make a choice to start the game."
 
 }
 
