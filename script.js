@@ -24,15 +24,21 @@ document.querySelector(".rock-button").addEventListener("click", () => playRound
 document.querySelector(".paper-button").addEventListener("click", () => playRound("paper"));
 document.querySelector(".scissors-button").addEventListener("click", () => playRound("scissors"));
 
+
+
 function playRound(humanChoice){
     const computerChoice = getComputerChoice();
 
-    displayHumanChoice.textContent = displayChoice(humanChoice);
-    displayComputerChoice.textContent = displayChoice(computerChoice);
+    // displayHumanChoice.textContent = displayChoice(humanChoice);
+    // displayComputerChoice.textContent = displayChoice(computerChoice);
+    displayHumanChoice.textContent = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1);
+    displayComputerChoice.textContent = computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
+
 
     //in case of a tie
     if(humanChoice===computerChoice){
-        displayResult.innerHTML = "It's a <span class = `winner`>Tie!</span> Both chose "+humanChoice;
+        displayResult.innerHTML = "It's a <span class = `winner`>Tie!</span> Both chose "
+        +computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
     }
 
     //cases where the player wins
@@ -42,7 +48,7 @@ function playRound(humanChoice){
         (humanChoice === "scissors" && computerChoice === "paper")      
     ) {
          displayResult.innerHTML = "The player <span class = `winner`>Wins! </span>"
-         + humanChoice + " beats "+computerChoice ;
+         + humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1) + " beats "+computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1) ;
          humanScore++;
 
          humanScoreDisplay.textContent = humanScore;
@@ -56,7 +62,7 @@ function playRound(humanChoice){
         (computerChoice === "scissors" && humanChoice === "paper")      
     ) {
          displayResult.innerHTML = "You <span class = `winner`>Lost! </span>" 
-         +computerChoice + " beats "+humanChoice;
+         +computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1) + " beats "+humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1);
          computerScore++;
 
          computerScoreDisplay.textContent=computerScore;
@@ -67,22 +73,22 @@ function playRound(humanChoice){
 }
 
 
-function displayChoice(choice){
-    switch(choice){
-        case "rock":
-            return "Rock";
+// function displayChoice(choice){
+//     switch(choice){
+//         case "rock":
+//             return "Rock";
         
-        case "paper":
-            return "Paper";
+//         case "paper":
+//             return "Paper";
 
-        case "scissors":
-            return "Scissors";
+//         case "scissors":
+//             return "Scissors";
 
-        default:
-            return "-_-"
-    }
+//         default:
+//             return "-_-"
+//     }
 
-}
+// }
 
 
 
