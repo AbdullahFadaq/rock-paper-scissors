@@ -2,7 +2,7 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: cadetblue;
+    background: linear-gradient(80deg,rgba(42, 123, 155, 1) 1%, rgba(86, 198, 133, 1) 94%, rgba(87, 199, 133, 1) 100%, rgba(237, 221, 83, 1) 100%);
 }
 
 .header {
@@ -24,17 +24,6 @@ body {
     transform: translateX(-50%);
 }
 
-
-.reset-button {
-    background-color: darkcyan;
-    color: white;
-    font-size: 24px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
 .choose-text {
     text-align: center;
     margin-bottom: 40px;
@@ -47,20 +36,24 @@ body {
     margin-bottom: 40px;
 }
 
-.choice-buttons button {
+button {
+    outline: 0;
+    border: 0;
+    cursor: pointer;
     background-color: darkcyan; 
     text-decoration: none;
     font-size: 32px;
-    width: 30%;
+    width: 450px;
     padding: 25px 26px;
     text-align: center;
     border: solid 2px darkslategray;
     border-radius: 8px;
+    transition: transform 200ms,background 200ms;
 }
 
 button:hover {
             background: mediumaquamarine;
-            transform: translateY(-3px);
+            transform: translateY(-6px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
@@ -74,6 +67,12 @@ button:hover {
 .display-choices div {
     text-align: center;
    font-size: 28px;
+}
+
+.choice {
+    font-size: 38px;
+    color: #1a1a1a;
+    padding-top: 16px;
 }
 
 
@@ -101,6 +100,6 @@ button:hover {
 .player-score span, .computer-score span {
     padding-top: 16px;
     font-size: 32px;
-    color: darkslategray;
+    color:#1a1a1a;
 }
 
