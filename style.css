@@ -54,13 +54,40 @@ button:hover {
 
 .display-choices {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
     padding: 16px 28px;
 }
+
 .display-choices div {
+    text-align: center;
+   font-size: 28px;
+}
+
+
+.round-result {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.score-container {
     display: flex;
-    gap: 65px;
-   font-size: 22px;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.player-score, .computer-score {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+.player-score span, .computer-score span {
+    padding-top: 16px;
+    font-size: 32px;
+    color: darkslategray;
 }
 
